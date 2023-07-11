@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="  min-h-screen flex flex-col  justify-between text-pink-900 ">
+    <main className="  min-h-screen flex flex-col w-full  text-pink-900 ">
       {" "}
       {/**aplicar animação de a cada clique ir comendo um pedaço do donut */}
       <Link href={"/"} className="flex ">
@@ -15,12 +15,12 @@ export default function Home() {
           <h1 className=" text-amber-600 text-xl  font-extrabold self-center -ml-6 shadow-pink-600 drop-shadow-lg">Store</h1>
         </div>
       </Link>
-      <section className="py-10">
-        <div className="container mx-auto text-center flex flex-col">
+      <section>
+        <div className="container mx-auto text-center flex ">
           <Image src={logo} width={320} height={320} alt="Logo image" className="" />
           <div className="my-auto">
-            <h1 className="text-5xl font-bold mb-8 text-white">Welcome to The Donut Store</h1>
-            <p className="text-lg text-white">Indulge in our delicious and freshly baked donuts</p>
+            <h1 className="text-5xl font-bold mb-8 text-rose-900">Welcome to The Donut Store</h1>
+            <p className="text-lg text-rose-900">Indulge in our delicious and freshly baked donuts</p>
             <Link href={"/products"} className="bg-gradient-to-r from-rose-700 to-pink-700 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full mt-10">
               Order Now
             </Link>

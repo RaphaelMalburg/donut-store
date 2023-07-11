@@ -43,7 +43,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`bg-gradient-to-r from-rose-800 to-pink-800  transition-all relative
+      className={`bg-gradient-to-r from-rose-900 to-pink-950  transition-all relative
        ${menuOpen ? "md:w-32" : "md:w-64"}  md:h-screen w-full h-20 md:h-100vh mx-auto  flex flex-col  duration-500 delay-200 ease-in-out  `}>
       <button className="mx-auto bg-transparent  " style={{ transitionProperty: "width" }} onClick={handleToggleMenu}>
         <HiMenuAlt1 size={80} className={`${menuOpen ? "text-rose-50" : "text-amber-400"} hidden md:block active:text-amber-400`} />
