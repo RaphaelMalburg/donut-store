@@ -9,10 +9,10 @@ interface CardProps {
 }
 const Card = ({ title, description, price, image }: CardProps) => {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <Image className="rounded-t-lg" src={image} alt="" />
+    <div className=" bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 md:min-h-72 ">
+      <Image className="rounded-t-lg max-h-60 object-cover" src={image} alt="" />
 
-      <div className="p-5">
+      <div className="p-5 h-52">
         <a href="#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
         </a>

@@ -9,5 +9,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <section className="w-full h-fit min-h-screen">{children}</section>;
+  return <section className="w-full h-screen min-h-screen">{children}</section>;
 }

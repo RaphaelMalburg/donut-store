@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="  min-h-screen flex flex-col w-full  text-pink-900 ">
+    <main className=" h-full  min-h-screen flex flex-col   w-full text-pink-900 ">
       {" "}
       {/**aplicar animação de a cada clique ir comendo um pedaço do donut */}
       <Link href={"/"} className="flex ">
