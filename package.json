@@ -25,6 +25,8 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "daisyui": "^3.1.7"
+    "daisyui": "^3.1.7",
+    "json-server": "^0.17.3",
+    "tailwind-scrollbar": "^3.0.4"
   }
 }

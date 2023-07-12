@@ -1,35 +1,52 @@
+"use client";
 import React from "react";
-import { Product, getDonuts, getCupcakes, getBeverages, getSandwiches } from "./../../content/products";
+import { Product, getDonuts } from "./../../content/products";
 import Image from "next/image";
 import Card from "@/components/Card";
 import logo from "../../public/assets/images/logodonut.png";
 import Link from "next/link";
 import Title from "@/components/Title";
+import { currencyFormat } from "@/helpers/currencyFormat";
+import { motion } from "framer-motion";
 
 const ProductList: React.FC = () => {
   const donuts: Product[] = getDonuts();
 
-  // You can now use these variables to display the product information on the screen
+  const gridVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1 },
+  };
 
   return (
-    <div className=" h-screen">
-      <div className=" overflow-auto h-full">
-        <Link href={"/"} className="flex ">
+    <div className="h-screen md:px-20">
+      <div className="overflow-auto h-full scrollbar-thin scrollbar-thumb-rose-200">
+        <Link href={"/"} className="flex">
           <Image src={logo} width={120} height={120} alt="Logo image" className="" />
           <div className="w-full h-full my-auto tracking-widest">
-            <h1 className="text-pink-900 text-2xl font-extrabold self-center -ml-6  shadow-pink-600 drop-shadow-lg">Donut</h1>
-            <h1 className=" text-amber-600 text-xl  font-extrabold self-center -ml-6 shadow-pink-600 drop-shadow-lg">Store</h1>
+            <h1 className="text-pink-900 text-2xl font-extrabold self-center -ml-6 shadow-pink-600 drop-shadow-lg">Donut</h1>
+            <h1 className="text-amber-600 text-xl font-extrabold self-center -ml-6 shadow-pink-600 drop-shadow-lg">Store</h1>
           </div>
         </Link>
 
         <Title title="Donut" />
-        <div className=" px-2 grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-4 place-items-center align-middle">
+        <motion.div className="grid_product gap-14 content-center justify-items-center align-content-center" variants={gridVariants} initial="hidden" animate="visible">
           {donuts.map((donut: Product, index: number) => (
-            <div key={index}>
-              <Card title={donut.title} description={donut.description} price={donut.price} image={donut.image} />
-            </div>
+            <motion.div key={index} variants={cardVariants}>
+              <Card title={donut.title} description={donut.description} price={currencyFormat(donut.price)} image={donut.image} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
