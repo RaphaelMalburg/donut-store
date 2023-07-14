@@ -29,7 +29,8 @@ const ProductList: React.FC = () => {
   };
 
   return (
-    <div className="h-screen md:px-20">
+    <div className="h-screen md:px-20 ">
+      {" "}
       <div className="overflow-auto h-full scrollbar-thin scrollbar-thumb-rose-200">
         <Link href={"/"} className="flex">
           <Image src={logo} width={120} height={120} alt="Logo image" className="" />
@@ -40,7 +41,7 @@ const ProductList: React.FC = () => {
         </Link>
 
         <Title title="Donut" />
-        <motion.div className="grid_product gap-14 content-center justify-items-center align-content-center" variants={gridVariants} initial="hidden" animate="visible">
+        <motion.div className="grid_product gap-14 content-center justify-items-center align-content-center " variants={gridVariants} initial="hidden" animate="visible">
           {donuts.map((donut: Product, index: number) => (
             <motion.div key={index} variants={cardVariants}>
               <Card title={donut.title} description={donut.description} price={currencyFormat(donut.price)} image={donut.image} />

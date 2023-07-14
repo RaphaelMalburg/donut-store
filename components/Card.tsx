@@ -22,7 +22,7 @@ const Card = ({ title, description, price, image }: CardProps) => {
           <p>{price}</p>
           <a
             href="#"
-            className="inline-flex items-center px-3 py-2 text-sm  text-center font-bold text-pink-950 bg-amber-400 rounded-lg  hover:scale-105 delay-10 transition-all duration-100 focus:ring-4 focus:outline-none focus:ring-pink-950 dark:bg-pink-900 dark:focus:ring-amber-400">
+            className="inline-flex items-center px-3 py-2 text-sm  text-center font-bold text-pink-950 bg-amber-400 rounded-lg  hover:scale-105 delay-10 transition-all duration-100 focus:ring-1 focus:outline-none focus:ring-pink-950 dark:bg-pink-900 dark:focus:ring-amber-400">
             Add to cart
             <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path

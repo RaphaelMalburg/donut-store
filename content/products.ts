@@ -75,6 +75,14 @@ export const getDonuts = (): Product[] => {
       image: donut5,
       id: 5,
     },
+    {
+      title: "Strawberry Donut",
+      description: "Savor the sweet and fruity flavors of our strawberry donut topped with strawberry glaze.",
+      price: 3.25,
+      additionalInfo: "Made with fresh strawberries.",
+      image: donut6,
+      id: 6,
+    },
     // Add more donut objects here...
   ];
 };
@@ -112,6 +120,30 @@ export const getCupcakes = (): Product[] => {
       additionalInfo: "Handcrafted with the finest Belgian chocolate.",
       image: cupcake4,
       id: 9,
+    },
+    {
+      title: "Vanilla Cupcake",
+      description: "Savor the classic vanilla cupcake topped with vanilla buttercream frosting.",
+      price: 3.25,
+      additionalInfo: "Made with real vanilla beans.",
+      image: cupcake5,
+      id: 10,
+    },
+    {
+      title: "Lemon Cupcake",
+      description: "Treat yourself to our lemon cupcake topped with lemon buttercream frosting.",
+      price: 3.25,
+      additionalInfo: "Made with fresh lemon juice and zest.",
+      image: cupcake6,
+      id: 11,
+    },
+    {
+      title: "Peanut Butter Cupcake",
+      description: "Indulge in the rich flavors of our peanut butter cupcake topped with peanut butter frosting.",
+      price: 3.5,
+      additionalInfo: "Made with freshly ground peanuts.",
+      image: cupcake7,
+      id: 12,
     },
     // Add more cupcake objects here...
   ];
@@ -151,6 +183,14 @@ export const getBeverages = (): Product[] => {
       image: beverage4,
       id: 13,
     },
+    {
+      title: "Caramel Latte",
+      description: "Indulge in the rich flavors of our caramel latte.",
+      price: 3.75,
+      additionalInfo: "Customizable sweetness and additional espresso shots or flavored syrups.",
+      image: beverage5,
+      id: 14,
+    },
     // Add more beverage objects here...
   ];
 };
@@ -188,6 +228,14 @@ export const getSandwiches = (): Product[] => {
       additionalInfo: "",
       image: sandwich4,
       id: 17,
+    },
+    {
+      title: "Roast Beef Sandwich",
+      description: "Enjoy the rich flavors of our roast beef sandwich with tender roast beef, caramelized onions, and horseradish aioli.",
+      price: 6.75,
+      additionalInfo: "",
+      image: sandwich5,
+      id: 18,
     },
     // Add more sandwich objects here...
   ];

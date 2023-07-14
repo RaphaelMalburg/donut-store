@@ -9,6 +9,7 @@ import logo from "../../public/assets/images/logodonut.png";
 import Title from "@/components/Title";
 import { currencyFormat } from "@/helpers/currencyFormat";
 import { motion } from "framer-motion";
+import GridCard from "@/components/GridCard";
 const beverages: Product[] = getBeverages();
 
 const Beverages = () => {
@@ -29,7 +30,7 @@ const Beverages = () => {
   };
   return (
     <div className="h-screen md:px-20">
-      <div className="overflow-auto h-full ">
+      <div className="overflow-auto h-full scrollbar-thin scrollbar-thumb-rose-200">
         <Link href={"/"} className="flex">
           <Image src={logo} width={120} height={120} alt="Logo image" className="" />
           <div className="w-full h-full my-auto tracking-widest">

@@ -43,15 +43,15 @@ const Nav = () => {
 
   return (
     <nav
-      className={`bg-gradient-to-r from-rose-900 to-pink-950 transition-all md:relative  ${
+      className={`bg-gradient-to-r from-rose-900 to-pink-950 transition-all md:relative   ${
         menuOpen ? "md:w-32" : "md:w-72"
-      }  md:h-full w-full h-28 mx-auto fixed  left-0 top-0 duration-500 delay-200 ease-in-out   `}>
+      }  md:h-full w-full h-28 mx-auto fixed  left-0 bottom-0 duration-500 delay-200 ease-in-out  md:flex md:flex-col  justify-between `}>
       <button className="mx-auto bg-transparent  " style={{ transitionProperty: "width" }} onClick={handleToggleMenu}>
         <HiMenuAlt1 size={80} className={`${menuOpen ? "text-rose-50" : "text-amber-400"} hidden md:block active:text-amber-400`} />
       </button>
 
       <motion.ul
-        className=" container mx-full md:pt-40 flex md:flex-col md:gap-12 pt-4 font-semibold text-xl tracking-wider text-center items-center md:w-auto w-[96%]  text-rose-50 -pl-2 md:mr-4 mx-auto"
+        className=" container mx-full md:pb-10 xl:pb-40 flex md:flex-col md:gap-12 pt-4 font-semibold text-xl tracking-wider text-center items-center md:w-auto w-[96%]  text-rose-50 -pl-2 md:mr-4 mx-auto"
         variants={container}
         initial="hidden"
         animate="visible">
