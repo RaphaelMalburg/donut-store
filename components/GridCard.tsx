@@ -3,6 +3,7 @@ import { currencyFormat } from "@/helpers/currencyFormat";
 import { motion } from "framer-motion";
 import { Product } from "../content/products";
 import Card from "./Card";
+import { useProductContext } from "@/context/ProductContext";
 
 interface GridCardProps {
   children: Product[];

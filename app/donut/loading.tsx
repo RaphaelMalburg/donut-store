@@ -10,14 +10,14 @@ const Loading = () => {
     <div className="h-screen md:px-20">
       <div className="overflow-auto h-full scrollbar-thin scrollbar-thumb-rose-200">
         <Title title="Donut" />
-        <div className="grid_product gap-14 content-center justify-items-center align-content-center">
-          <ul className="space-y-2 list-disc">
+        <div className="  gap-14 content-center justify-items-center align-content-center">
+          <div className="space-y-2 list-disc md:grid-cols-3 sm:grid-cols-2 grid ">
             {itemArray.map((i: number) => (
-              <li key={i}>
+              <div key={i}>
                 <CardSkeleton />
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>

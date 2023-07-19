@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Product, getDonuts } from "./../../content/products";
 import Image from "next/image";
 import Card from "@/components/Card";
@@ -11,7 +11,20 @@ import { motion } from "framer-motion";
 
 const ProductList: React.FC = () => {
   const donuts: Product[] = getDonuts();
+  const [donutsList, setDonutsList] = React.useState<Product[]>([]);
 
+  const getDonutsData = async () => {
+    const data = await fetch("http://localhost:5000/donuts");
+    const donutsList = await data.json();
+    console.log(donutsList);
+    return donutsList;
+  };
+  useEffect(() => {
+    (async () => {
+      setDonutsList(await getDonutsData());
+    })();
+    console.log(`this is the list: ${donutsList}`);
+  }, []);
   const gridVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -44,7 +57,7 @@ const ProductList: React.FC = () => {
         <motion.div className="grid_product gap-14 content-center justify-items-center align-content-center " variants={gridVariants} initial="hidden" animate="visible">
           {donuts.map((donut: Product, index: number) => (
             <motion.div key={index} variants={cardVariants}>
-              <Card title={donut.title} description={donut.description} price={currencyFormat(donut.price)} image={donut.image} />
+              <Card title={donut.title} description={donut.description} price={parseFloat(currencyFormat(donut.price))} image={donut.image} />
             </motion.div>
           ))}
         </motion.div>

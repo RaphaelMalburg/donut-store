@@ -2,6 +2,7 @@ import Image from "next/image";
 import Card from "../components/Card";
 import logo from "../public/assets/images/logodonut.png";
 import Link from "next/link";
+import Cart from "@/components/Cart";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <h1 className=" text-amber-600 text-xl  font-extrabold self-center -ml-6 shadow-pink-600 drop-shadow-lg">Store</h1>
         </div>
       </Link>
+      {/* Hero Section */}
       <section>
         <div className="container mx-auto text-center flex ">
           <Image src={logo} width={320} height={320} alt="Logo image" className="" />

@@ -4,7 +4,6 @@ const CardSkeleton = () => {
   return (
     <>
       <div className="flex">
-        <div className="w-10 h-10 rounded-full bg-slate-400" />
         <div className="w-full h-full my-auto bg-slate-400"></div>
       </div>
       <div className="border border-slate-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
