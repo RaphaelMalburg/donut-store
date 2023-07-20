@@ -5,7 +5,7 @@ import { useCart } from "@/hooks/useCart";
 interface CardProps {
   title: string;
   description: string;
-  price: number;
+  price: number | string;
   image: string;
   value?: number;
 }
@@ -13,13 +13,12 @@ const Card = ({ title, description, price, image, value }: CardProps) => {
   const { addItemsIntoCart } = useCart();
 
   return (
-    <div className=" bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 h-fit ">
+    <div className=" bg-white border border-gray-200 rounded-lg shadow mr-10 flex flex-col justify-center align-middle dark:bg-gray-800 dark:border-gray-700 min-h-full relative -z-10">
+      <span className="absolute top-1 left-1 rounded-full w-7 flex justify-center align-middle bg-amber-400 text-lg text-pink-950 font-bold z-10">1</span>
       <Image className="rounded-t-lg max-h-60 object-cover" src={image} alt="" />
 
-      <div className="p-5 h-fit">
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
-        </a>
+      <div className="p-5  h-fit">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
 
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
         <div className=" flex justify-between">
