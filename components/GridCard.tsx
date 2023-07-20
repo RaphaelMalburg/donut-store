@@ -26,9 +26,9 @@ const GridCard: React.FC<GridCardProps> = ({ children }) => {
   };
   return (
     <motion.div className="grid_product gap-14 content-center justify-items-center align-content-center" variants={gridVariants} initial="hidden" animate="visible">
-      {children.map((sandwich: Product, index: number) => (
+      {children.map((item: Product, index: number) => (
         <motion.div key={index} variants={cardVariants}>
-          <Card title={sandwich.title} description={sandwich.description} price={currencyFormat(sandwich.price)} image={sandwich.image} />
+          <Card title={item.title} description={item.description} price={item.price} image={item.image} value={item.price} />
         </motion.div>
       ))}
     </motion.div>

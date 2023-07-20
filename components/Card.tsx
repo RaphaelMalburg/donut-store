@@ -7,9 +7,11 @@ interface CardProps {
   description: string;
   price: number;
   image: string;
+  value?: number;
 }
-const Card = ({ title, description, price, image }: CardProps) => {
+const Card = ({ title, description, price, image, value }: CardProps) => {
   const { addItemsIntoCart } = useCart();
+
   return (
     <div className=" bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 h-fit ">
       <Image className="rounded-t-lg max-h-60 object-cover" src={image} alt="" />
@@ -22,9 +24,10 @@ const Card = ({ title, description, price, image }: CardProps) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
         <div className=" flex justify-between">
           <p>{price}</p>
+          <p className="hidden">{value}</p>
           <button
             type="button"
-            onClick={() => addItemsIntoCart({ title, description, price, image })}
+            onClick={() => addItemsIntoCart({ title, description, price, image, value })}
             className="inline-flex items-center px-3 py-2 text-sm  text-center font-bold text-pink-950 bg-amber-400 rounded-lg  hover:scale-105 delay-10 transition-all duration-100 focus:ring-1 focus:outline-none focus:ring-pink-950 dark:bg-pink-900 dark:focus:ring-amber-400">
             Add to cart
             <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

@@ -5,4 +5,7 @@ export interface Product {
   additionalInfo?: string;
   image?: any;
   id?: number;
+  value?: number | undefined;
+  quantity?: number;
+  subtotal?: number;
 }

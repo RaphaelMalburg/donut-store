@@ -57,7 +57,7 @@ const ProductList: React.FC = () => {
         <motion.div className="grid_product gap-14 content-center justify-items-center align-content-center " variants={gridVariants} initial="hidden" animate="visible">
           {donuts.map((donut: Product, index: number) => (
             <motion.div key={index} variants={cardVariants}>
-              <Card title={donut.title} description={donut.description} price={parseFloat(currencyFormat(donut.price))} image={donut.image} />
+              <Card title={donut.title} description={donut.description} price={currencyFormat(donut.price)} image={donut.image} value={donut.price} />
             </motion.div>
           ))}
         </motion.div>

@@ -31,6 +31,7 @@ export interface Product {
   additionalInfo?: string;
   image?: any;
   id: number;
+  value?: number;
 }
 
 export const getDonuts = (): Product[] => {
