@@ -10,6 +10,8 @@ import { HiMenuAlt1 } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import { MenuOpenContext } from "@/context/menuOpenContext";
 import Link from "next/link";
+import { useCart } from "@/hooks/useCart";
+import Cart from "./Cart";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(true);
@@ -41,11 +43,12 @@ const Nav = () => {
     },
   };
 
+  const { cart } = useCart();
   return (
     <nav
       className={`bg-gradient-to-r from-rose-900 to-pink-950 transition-all md:relative   ${
         menuOpen ? "md:w-32" : "md:w-72"
-      }  md:h-full w-full h-28 mx-auto fixed  left-0 bottom-0 duration-500 delay-200 ease-in-out  md:flex md:flex-col  justify-between `}>
+      }  md:h-full w-full h-28 mx-auto fixed  left-0 bottom-0 duration-500 delay-200 ease-in-out z-50 md:flex md:flex-col  justify-between `}>
       <button className="mx-auto bg-transparent  " style={{ transitionProperty: "width" }} onClick={handleToggleMenu}>
         <HiMenuAlt1 size={80} className={`${menuOpen ? "text-rose-50" : "text-amber-400"} hidden md:block active:text-amber-400`} />
       </button>

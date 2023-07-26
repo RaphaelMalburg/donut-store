@@ -1,15 +1,16 @@
 "use client";
 import { useProductContext } from "@/context/ProductContext";
+import { useCart } from "@/hooks/useCart";
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Cart = () => {
-  const { products } = useProductContext();
+  const { cart } = useCart();
   return (
-    <div className="">
-      <AiOutlineShoppingCart />
-      <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-        {products.length}
+    <div className="flex justify-center items-center h-20 gap-3">
+      <AiOutlineShoppingCart size={35} color="#651535" />
+      <span className=" items-center justify-center px-3 py-2 my-auto text-lg font-bold leading-none text-red-100 t-translate-y-1/2 bg-gradient-to-r from-rose-900 to-pink-950 rounded-full">
+        {cart.length}
       </span>
     </div>
   );

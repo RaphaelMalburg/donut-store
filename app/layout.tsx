@@ -4,6 +4,7 @@ import Nav from "./../components/Nav";
 import { createContext } from "vm";
 import { Product } from "@/content/products";
 import { CartContext, CartProvider } from "@/context/CartContext";
+import Cart from "@/components/Cart";
 const inter = Inter({ subsets: ["latin"] });
 
 interface foodContextProps {
@@ -25,6 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CartProvider>
           <Nav />
           {children}
+          <div className="absolute top-10 right-28">
+            <Cart />
+          </div>
         </CartProvider>
       </body>
     </html>
