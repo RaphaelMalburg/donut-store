@@ -2,6 +2,8 @@
 
 import { Product } from "@/interfaces";
 import React, { ReactNode, useState, createContext, useEffect } from "react";
+import { toast } from "react-toastify";
+import { snackEmoji } from "@/helpers/snackEmoji";
 
 interface Items extends Product {
   quantity: number;
@@ -43,10 +45,11 @@ export function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<Items[]>([]);
 
   function addItemsIntoCart(item: Product): void {
+    //search if item already exists in cart
     const itemIndex = cart.findIndex((cartItem) => cartItem.title === item.title && cartItem.id === item.id);
 
+    // If the item already exists in the cart, update its quantity and subtotal
     if (itemIndex !== -1) {
-      // If the item already exists in the cart, update its quantity and subtotal
       const updatedCart = [...cart];
       updatedCart[itemIndex].quantity += 1;
       updatedCart[itemIndex].subTotal = updatedCart[itemIndex].quantity * item.value;
@@ -54,8 +57,9 @@ export function CartProvider({ children }: CartProviderProps) {
     } else {
       // If the item doesn't exist in the cart, add it as a new item
       const newItem: Items = { ...item, quantity: 1, subTotal: item.value };
-      setCart([...cart, newItem]);
+      setCart((prevCart) => [...prevCart, newItem]);
     }
+    toast.success(`${item.title} added to cart!`);
     console.log(`cart`, cart);
   }
 

@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 
-import { Product, getBeverages } from "./../../content/products";
+import { Product, getBeverages } from "../../../content/products";
 import Image from "next/image";
 import Card from "@/components/Card";
 import Link from "next/link";
-import logo from "../../public/assets/images/logodonut.png";
+import logo from "../../../public/assets/images/logodonut.png";
 import Title from "@/components/Title";
 import { currencyFormat } from "@/helpers/currencyFormat";
 import { motion } from "framer-motion";

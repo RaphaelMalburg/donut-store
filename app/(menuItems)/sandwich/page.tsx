@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { Product, getDonuts, getCupcakes, getBeverages, getSandwiches } from "./../../content/products";
+import { Product, getDonuts, getCupcakes, getBeverages, getSandwiches } from "../../../content/products";
 import Image from "next/image";
 import Card from "@/components/Card";
-import logo from "../../public/assets/images/logodonut.png";
+import logo from "../../../public/assets/images/logodonut.png";
 import Link from "next/link";
 import Title from "@/components/Title";
 import { currencyFormat } from "@/helpers/currencyFormat";

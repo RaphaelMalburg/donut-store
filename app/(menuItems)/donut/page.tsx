@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
-import { Product, getDonuts } from "./../../content/products";
+import { Product, getDonuts } from "../../../content/products";
 import Image from "next/image";
 import Card from "@/components/Card";
-import logo from "../../public/assets/images/logodonut.png";
+import logo from "../../../public/assets/images/logodonut.png";
 import Link from "next/link";
 import Title from "@/components/Title";
 import { currencyFormat } from "@/helpers/currencyFormat";
@@ -44,7 +44,7 @@ const ProductList: React.FC = () => {
   return (
     <div className="h-screen md:px-20 ">
       {" "}
-      <div className="overflow-auto h-full scrollbar-thin scrollbar-thumb-rose-200">
+      <div className="overflow-auto h-full scrollbar-thin scrollbar-thumb-rose-300">
         <Link href={"/"} className="flex">
           <Image src={logo} width={120} height={120} alt="Logo image" className="" />
           <div className="w-full h-full my-auto tracking-widest">

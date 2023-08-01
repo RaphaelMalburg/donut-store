@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Card from "../components/Card";
-import logo from "../public/assets/images/logodonut.png";
+import Card from "../../components/Card";
+import logo from "../../public/assets/images/logodonut.png";
 import Link from "next/link";
 import Cart from "@/components/Cart";
 
@@ -9,11 +9,11 @@ export default function Home() {
     <main className=" h-full  min-h-screen flex flex-col   w-full text-pink-900 ">
       {" "}
       {/**aplicar animação de a cada clique ir comendo um pedaço do donut */}
-      <Link href={"/"} className="flex ">
+      <Link href={"/"} className="flex h-fit">
         <Image src={logo} width={120} height={120} alt="Logo image" className="" />
-        <div className="w-full h-full my-auto tracking-widest">
-          <h1 className="text-pink-900 text-2xl font-extrabold self-center -ml-6  shadow-pink-600 drop-shadow-lg">Donut</h1>
-          <h1 className=" text-amber-600 text-xl  font-extrabold self-center -ml-6 shadow-pink-600 drop-shadow-lg">Store</h1>
+        <div className="w-full h-full  my-auto tracking-widest">
+          <h1 className="text-pink-900 text-2xl font-extrabold self-center -ml-6 shadow-pink-600 drop-shadow-lg">Donut</h1>
+          <h1 className="text-amber-600 text-xl font-extrabold self-center -ml-6 shadow-pink-600 drop-shadow-lg">Store</h1>
         </div>
       </Link>
       {/* Hero Section */}
