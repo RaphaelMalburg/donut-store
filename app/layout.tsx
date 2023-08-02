@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${inter.className} h-screen max-h-screen  w-screen  md:flex relative overflow-hidden `}>
         <CartProvider>
-          <ToastContainer autoClose={2000} />
+          <ToastContainer autoClose={1000} />
 
           {children}
         </CartProvider>
