@@ -16,14 +16,15 @@ const Card = ({ title, description, price, image, value }: CardProps) => {
   const itemExist = cart.find((item) => item.title === title);
 
   return (
-    <div className=" bg-white border border-gray-200 rounded-lg shadow mr-10 flex flex-col justify-center align-middle dark:bg-gray-800 dark:border-gray-700 min-h-full relative ">
+    <div className=" bg-white border h-max  border-gray-200 rounded-lg shadow  flex flex-col justify-center align-middle dark:bg-gray-800 dark:border-gray-700  mb-10 ">
       {itemExist && (
         <span className="absolute top-1 left-1 rounded-full w-7 flex justify-center align-middle bg-amber-400 text-lg text-pink-950 font-bold z-10">{itemExist?.quantity}</span>
       )}
+      <div className="h-60 w-full flex self-start relative rounded-t-lg ">
+        <Image className="rounded-t-lg object-cover" fill src={image} alt="" />
+      </div>
 
-      <Image className="rounded-t-lg max-h-60 object-cover" src={image} alt="" />
-
-      <div className="p-5  h-fit">
+      <div className="p-5  h-64 flex flex-col justify-around">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
 
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>

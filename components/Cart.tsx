@@ -8,7 +8,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 const Cart = () => {
   const { cart } = useCart();
   return (
-    <Link href={"/myorder"} className="flex justify-center items-center h-20 gap-3">
+    <Link href={"/myorder"} className="flex justify-center items-center h-20 gap-3 rounded-full bg-gradient-to-r from-rose-100/70 px-2 py-2 to-pink-300/40">
       <AiOutlineShoppingCart size={35} color="#651535" />
       <span className=" items-center justify-center px-3 py-2 my-auto text-lg font-bold leading-none text-red-100 t-translate-y-1/2 bg-gradient-to-r from-rose-900 to-pink-950 rounded-full">
         {`${cart.length}`.padStart(2, "0")}

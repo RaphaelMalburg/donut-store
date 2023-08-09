@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <section className="h-screen max-h-screen  w-screen  md:flex relative overflow-hidden">
+    <section className="h-screen max-h-screen  w-screen   md:flex relative overflow-hidden bg-gradient-to-r from-pink-50 to-pink-200">
       <Nav />
       {children}{" "}
-      <div className="absolute top-10 right-28">
+      <div className="absolute md:top-10 md:right-28 top-5 right-5">
         <Cart />
       </div>
     </section>
