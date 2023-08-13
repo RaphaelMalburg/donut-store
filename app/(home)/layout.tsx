@@ -1,4 +1,3 @@
-"use client";
 import "@/app/globals.css";
 import Cart from "@/components/Cart";
 import Nav from "@/components/Nav";
